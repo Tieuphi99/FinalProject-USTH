@@ -6,91 +6,78 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public int speed = 10;
-    private Animator playerAnim;
-    private Rigidbody2D playerRb;
-    public int maxSpeed = 7;
+    public float speed = 410f;
+    public float jumpForce = 795f;
+    [Range(0, 1)] public float smoothTime = 0.6f;
 
-    // Start is called before the first frame update
-    void Start()
+    private bool _isOnGround = true;
+    private Vector3 _velocity = Vector3.zero;
+
+    private Animator _playerAnim;
+    private Rigidbody2D _playerRb;
+
+    private static readonly int IsIdling = Animator.StringToHash("Idle_b");
+    private static readonly int IsWalking = Animator.StringToHash("Walk_b");
+    private static readonly int IsRunning = Animator.StringToHash("Run_b");
+    private static readonly int SpeedF = Animator.StringToHash("Speed_f");
+    private static readonly int JumpTrig = Animator.StringToHash("Jump_trig");
+
+    void Awake()
     {
-        playerAnim = GetComponent<Animator>();
-        playerRb = GetComponent<Rigidbody2D>();
+        _playerAnim = GetComponent<Animator>();
+        _playerRb = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
     {
         MovePlayer();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        ChangeAnim();
+        _playerAnim.SetFloat(SpeedF, Mathf.Abs(_playerRb.velocity.x));
     }
 
     void MovePlayer()
     {
         Vector3 localScale = transform.localScale;
-        playerRb.velocity = Vector2.ClampMagnitude(playerRb.velocity, maxSpeed);
-        // float horizontalInput = Input.GetAxis("Horizontal");
 
+        // Move
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        Vector2 playerVelocity = _playerRb.velocity;
+        Vector3 targetVelocity = new Vector2(horizontalInput * speed * Time.fixedDeltaTime, playerVelocity.y);
+        _playerRb.velocity = Vector3.SmoothDamp(playerVelocity, targetVelocity, ref _velocity, smoothTime);
+
+        // Jump
+        if (Input.GetKeyDown(KeyCode.Space) && _isOnGround)
+        {
+            _isOnGround = false;
+            _playerAnim.SetTrigger(JumpTrig);
+            _playerRb.AddForce(new Vector2(0f, jumpForce));
+        }
+
+        // Flip sprite, facing RIGHT
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            // transform.Translate(speed * horizontalInput * Time.deltaTime * Vector3.right);
-            playerRb.AddForce(speed * Time.deltaTime * Vector3.right, ForceMode2D.Impulse);
             if (localScale.x < 0)
             {
                 localScale.x *= -1f;
             }
         }
 
+        // Flip sprite, facing LEFT
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            // transform.Translate(speed * horizontalInput * Time.deltaTime * Vector3.right);
-            playerRb.AddForce(-speed * Time.deltaTime * Vector3.right, ForceMode2D.Impulse);
             if (localScale.x > 0)
             {
                 localScale.x *= -1f;
             }
         }
-        
-        transform.localScale = localScale;
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            transform.Translate(speed * Time.deltaTime * Vector3.up);
-        }
+        transform.localScale = localScale;
     }
 
-    void ChangeAnim()
+    private void OnCollisionEnter2D(Collision2D other)
     {
-        if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow))
+        if (other.gameObject.CompareTag("Ground"))
         {
-            playerAnim.SetBool("isIdling", false);
-            playerAnim.SetBool("isWalking", true);
-        }
-        else
-        {
-            playerAnim.SetBool("isIdling", true);
-            playerAnim.SetBool("isWalking", false);
-        }
-
-        if (Mathf.Abs(playerRb.velocity.x) > 3.5f)
-        {
-            playerAnim.SetBool("isWalking", false);
-            playerAnim.SetBool("isRunning", true);
-        }
-        else
-        {
-            playerAnim.SetBool("isWalking", true);
-            playerAnim.SetBool("isRunning", false);
-        }
-
-        if (playerRb.velocity.x == 0)
-        {
-            playerAnim.SetBool("isIdling", true);
-            playerAnim.SetBool("isWalking", false);
+            _isOnGround = true;
         }
     }
 }

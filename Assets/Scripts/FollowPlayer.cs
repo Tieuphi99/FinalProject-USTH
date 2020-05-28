@@ -6,10 +6,9 @@ using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
     public GameObject player;
-    private Vector3 playerPos;
     
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
         if (player.transform.position.x > 0)
         {
