@@ -7,7 +7,7 @@ public class FollowPlayer : MonoBehaviour
 {
     public GameObject player;
     
-    // Update is called once per frame
+    // Camera follows player
     void LateUpdate()
     {
         if (player.transform.position.x > 0)
