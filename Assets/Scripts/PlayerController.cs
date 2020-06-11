@@ -10,32 +10,39 @@ public class PlayerController : MonoBehaviour
     public float jumpForce = 795f;
     [Range(0, 1)] public float smoothTime = 0.6f;
 
+    public bool isDead;
     private bool _isOnGround = true;
     private Vector3 _velocity = Vector3.zero;
 
     private Animator _playerAnim;
     private Rigidbody2D _playerRb;
-
-    private GoombaController _goombaController;
-    public GameObject goomba;
+    private BoxCollider2D _playerCol;
 
     private static readonly int IdleB = Animator.StringToHash("Idle_b");
     private static readonly int WalkB = Animator.StringToHash("Walk_b");
     private static readonly int RunB = Animator.StringToHash("Run_b");
     private static readonly int SpeedF = Animator.StringToHash("Speed_f");
     private static readonly int JumpTrig = Animator.StringToHash("Jump_trig");
+    private static readonly int DieB = Animator.StringToHash("Die_b");
 
     void Awake()
     {
         _playerAnim = GetComponent<Animator>();
         _playerRb = GetComponent<Rigidbody2D>();
-        _goombaController = goomba.GetComponent<GoombaController>();
+        _playerCol = GetComponent<BoxCollider2D>();
     }
 
     private void FixedUpdate()
     {
-        MovePlayer();
-        _playerAnim.SetFloat(SpeedF, Mathf.Abs(_playerRb.velocity.x));
+        if (isDead)
+        {
+            Die();
+        }
+        else
+        {
+            MovePlayer();
+            GetPlayerSpeed();
+        }
     }
 
     void MovePlayer()
@@ -49,7 +56,7 @@ public class PlayerController : MonoBehaviour
         _playerRb.velocity = Vector3.SmoothDamp(playerVelocity, targetVelocity, ref _velocity, smoothTime);
 
         // Jump
-        if (Input.GetKey(KeyCode.Space) && _isOnGround)
+        if (Input.GetKeyDown(KeyCode.Space) && _isOnGround)
         {
             _isOnGround = false;
             _playerAnim.SetTrigger(JumpTrig);
@@ -60,7 +67,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Flip sprite, facing RIGHT
-        if (Input.GetKey(KeyCode.RightArrow) && _isOnGround)
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             if (localScale.x < 0)
             {
@@ -69,7 +76,7 @@ public class PlayerController : MonoBehaviour
         }
 
         // Flip sprite, facing LEFT
-        if (Input.GetKey(KeyCode.LeftArrow) && _isOnGround)
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             if (localScale.x > 0)
             {
@@ -80,29 +87,26 @@ public class PlayerController : MonoBehaviour
         transform.localScale = localScale;
     }
 
+    void Die()
+    {
+        _playerAnim.SetBool(DieB, isDead);
+        _playerCol.enabled = false;
+        _playerRb.velocity = Vector2.zero;
+    }
+
+    void GetPlayerSpeed()
+    {
+        _playerAnim.SetFloat(SpeedF, Mathf.Abs(_playerRb.velocity.x));
+    }
+
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Ground"))
+        if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Pipe") )
         {
             _isOnGround = true;
             _playerAnim.SetBool(IdleB, true);
             _playerAnim.SetBool(WalkB, true);
             _playerAnim.SetBool(RunB, true);
-            Debug.Log("Player touch the ground!");
         }
-        
-        if (other.gameObject.CompareTag("EnemyHead"))
-        {
-            // _playerRb.AddForce(new Vector2(0f, jumpForce / 8f));
-            Debug.Log("Player touch the head!");
-            _goombaController.Die();
-        }
-    
-        else if (other.gameObject.CompareTag("EnemyBody"))
-        {
-            // _playerRb.AddForce(new Vector2(0f, jumpForce / 8f));
-            Debug.Log("Player touch the body!");
-        }
-        
     }
 }

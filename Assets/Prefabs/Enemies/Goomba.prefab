@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 140782559582041885}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &140782557626579479
 SpriteRenderer:
@@ -90,13 +90,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 140782559582041885}
-  - component: {fileID: 4120727317071407422}
   - component: {fileID: 140782559582041886}
   - component: {fileID: 140782559582041882}
   - component: {fileID: 4392269553133641865}
   m_Layer: 0
   m_Name: Goomba
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,38 +111,12 @@ Transform:
   m_LocalPosition: {x: 12.44, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 140782557626579478}
   - {fileID: 5654608986093304199}
   - {fileID: 6647405461287572498}
+  - {fileID: 140782557626579478}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &4120727317071407422
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 140782559582041889}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.366316}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.85237324, y: 0.2121864}
-  m_EdgeRadius: 0
 --- !u!50 &140782559582041886
 Rigidbody2D:
   serializedVersion: 4
@@ -196,9 +169,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d70aef29bf8b4fc69dd91cb13bb48d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  headBox: {fileID: 4748182353129187720}
-  bodyBox: {fileID: 6128006002240828193}
+  speed: 0
 --- !u!1 &4354584424693637154
 GameObject:
   m_ObjectHideFlags: 0
@@ -209,6 +180,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5654608986093304199}
   - component: {fileID: 4748182353129187720}
+  - component: {fileID: 6630738012960786380}
   m_Layer: 0
   m_Name: Head Collider
   m_TagString: EnemyHead
@@ -228,7 +200,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 140782559582041885}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &4748182353129187720
 BoxCollider2D:
@@ -243,7 +215,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.30939478}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -254,8 +226,22 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.7217403, y: 0.24669087}
+  m_Size: {x: 0.78689307, y: 0.9399759}
   m_EdgeRadius: 0
+--- !u!114 &6630738012960786380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4354584424693637154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48bdf1ba280864ccfb381a4b495fa7f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  goomba: {fileID: 140782559582041889}
+  pushForce: 300
 --- !u!1 &4388187777132333211
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +252,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6647405461287572498}
   - component: {fileID: 6128006002240828193}
+  - component: {fileID: 3061857085521458329}
   m_Layer: 0
   m_Name: Body Collider
   m_TagString: EnemyBody
@@ -285,7 +272,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 140782559582041885}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &6128006002240828193
 BoxCollider2D:
@@ -313,3 +300,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.043259, y: 0.3207351}
   m_EdgeRadius: 0
+--- !u!114 &3061857085521458329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4388187777132333211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b2b30d2d18d4318a7ad37683d91dfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 5562541293349834288, guid: 2a2addac90ed74fabb168b9cf9fa008c, type: 3}
+  pushForce: 700

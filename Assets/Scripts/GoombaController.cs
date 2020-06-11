@@ -8,8 +8,6 @@ public class GoombaController : MonoBehaviour
 {
     public int speed = 3;
 
-    [SerializeField] private BoxCollider2D headBox;
-    [SerializeField] private BoxCollider2D bodyBox;
     private Animator _goombaAnim;
 
     private static readonly int DieB = Animator.StringToHash("Die_b");
@@ -30,19 +28,6 @@ public class GoombaController : MonoBehaviour
         transform.Translate(speed * Time.deltaTime * Vector3.left);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (headBox)
-        {
-            Debug.Log("Player touch the head!");
-        }
-    
-        else if (bodyBox)
-        {
-            Debug.Log("Player touch the body!");
-        }
-    }
-
     public void Die()
     {
         _goombaAnim.SetBool(DieB, true);
@@ -51,7 +36,7 @@ public class GoombaController : MonoBehaviour
 
     IEnumerator Destroy()
     {
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.3f);
         Destroy(gameObject);
     }
 }

@@ -132,9 +132,7 @@ MonoBehaviour:
   speed: 410
   jumpForce: 795
   smoothTime: 0.6
-  goombaController: {fileID: 4392269553133641865, guid: c8142232694ad4220ae54ca4bbc27a64,
-    type: 3}
-  goomba: {fileID: 140782559582041889, guid: c8142232694ad4220ae54ca4bbc27a64, type: 3}
+  isDead: 0
 --- !u!95 &5562541293349834303
 Animator:
   serializedVersion: 3

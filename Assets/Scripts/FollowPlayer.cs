@@ -10,9 +10,9 @@ public class FollowPlayer : MonoBehaviour
     // Camera follows player
     void LateUpdate()
     {
-        if (player.transform.position.x > 0)
+        if (player.transform.position.x > 4.5f)
         {
-            transform.position = new Vector3(player.transform.position.x, 3, -10);
+            transform.position = new Vector3(player.transform.position.x, 5, -10);
         }
     }
 }
