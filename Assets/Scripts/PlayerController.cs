@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
         _playerAnim = GetComponent<Animator>();
         _playerRb = GetComponent<Rigidbody2D>();
         _playerCol = GetComponent<BoxCollider2D>();
+        isDead = false;
     }
 
     private void FixedUpdate()
@@ -101,7 +102,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Pipe") )
+        if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Pipe") ||
+            other.gameObject.CompareTag("Brick") ||
+            other.gameObject.CompareTag("Stone"))
         {
             _isOnGround = true;
             _playerAnim.SetBool(IdleB, true);

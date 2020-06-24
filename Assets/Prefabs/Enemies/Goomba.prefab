@@ -99,7 +99,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &140782559582041885
 Transform:
   m_ObjectHideFlags: 0
@@ -169,7 +169,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d70aef29bf8b4fc69dd91cb13bb48d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 2
+  gameManager: {fileID: 0}
 --- !u!1 &4354584424693637154
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goomba: {fileID: 140782559582041889}
-  pushForce: 300
+  pushForce: 400
 --- !u!1 &4388187777132333211
 GameObject:
   m_ObjectHideFlags: 0
@@ -313,4 +314,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 5562541293349834288, guid: 2a2addac90ed74fabb168b9cf9fa008c, type: 3}
-  pushForce: 700
+  goomba: {fileID: 140782559582041889}

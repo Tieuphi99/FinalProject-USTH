@@ -6,9 +6,9 @@ using UnityEngine;
 public class EnemyHead : MonoBehaviour
 {
     private GoombaController _goombaController;
-    [SerializeField] private GameObject goomba;
+    public GameObject goomba;
 
-    public float pushForce = 300;
+    public float pushForce = 400;
 
     private void Awake()
     {
@@ -20,6 +20,7 @@ public class EnemyHead : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             other.rigidbody.AddForce(new Vector2(0f, pushForce));
+            _goombaController.speed = 0;
             _goombaController.Die();
         }
     }
