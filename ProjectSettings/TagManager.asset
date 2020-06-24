@@ -9,6 +9,9 @@ TagManager:
   - EnemyBody
   - Enemy
   - Pipe
+  - Brick
+  - Stone
+  - ScreenBorder
   layers:
   - Default
   - TransparentFX
