@@ -8,35 +8,29 @@ public class EnemyBody : MonoBehaviour
     private PlayerController _playerController;
     private GoombaController _goombaController;
     
-    public GameObject player;
     public GameObject goomba;
-
-    private Rigidbody2D _goombaRb;
-
-    private void Update()
-    {
-        if (goomba.transform.position.x - player.transform.position.x < 12)
-        {
-            goomba.SetActive(true);
-        }
-    }
 
     private void Awake()
     {
         _goombaController = goomba.GetComponent<GoombaController>();
-        _goombaRb = _goombaController.GetComponent<Rigidbody2D>();
-        _playerController = player.GetComponent<PlayerController>();
+        _playerController = _goombaController.player.GetComponent<PlayerController>();
+    }
+
+    private void Update()
+    {
+        if (_goombaController.isTouchByPlayer)
+        {
+            GetComponent<BoxCollider2D>().offset = Vector2.zero;
+            GetComponent<BoxCollider2D>().size = new Vector2(1.04f, 0.32f);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            Debug.Log($"Touch {other.gameObject.name}");
             StartCoroutine(Die(other.gameObject));
             _playerController.isDead = true;
-            _goombaController.speed = 0;
-            _goombaRb.velocity = Vector2.zero;
         }
     }
 

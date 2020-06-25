@@ -8,8 +8,6 @@ public class EnemyHead : MonoBehaviour
     private GoombaController _goombaController;
     public GameObject goomba;
 
-    public float pushForce = 400;
-
     private void Awake()
     {
         _goombaController = goomba.GetComponent<GoombaController>();
@@ -19,7 +17,7 @@ public class EnemyHead : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            other.rigidbody.AddForce(new Vector2(0f, pushForce));
+            other.rigidbody.AddForce(new Vector2(0f, _goombaController.pushForce));
             _goombaController.speed = 0;
             _goombaController.Die();
         }

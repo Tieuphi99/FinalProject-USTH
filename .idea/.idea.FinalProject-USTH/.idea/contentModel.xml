@@ -13,13 +13,20 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
-          <e p="BlockPlayer.cs" t="Include" />
-          <e p="EnemyBody.cs" t="Include" />
-          <e p="EnemyHead.cs" t="Include" />
-          <e p="FollowPlayer.cs" t="Include" />
-          <e p="GameManager.cs" t="Include" />
-          <e p="GoombaController.cs" t="Include" />
+          <e p="BrickController.cs" t="Include" />
+          <e p="CoinBrickController.cs" t="Include" />
+          <e p="EnemyScripts" t="Include">
+            <e p="EnemyBody.cs" t="Include" />
+            <e p="EnemyHead.cs" t="Include" />
+            <e p="GoombaController.cs" t="Include" />
+          </e>
           <e p="PlayerController.cs" t="Include" />
+          <e p="SystemScripts" t="Include">
+            <e p="BlockPlayer.cs" t="Include" />
+            <e p="FollowPlayer.cs" t="Include" />
+            <e p="GameManager.cs" t="Include" />
+            <e p="GameStatusController.cs" t="Include" />
+          </e>
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Fonts" t="Include">
