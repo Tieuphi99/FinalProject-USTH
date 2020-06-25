@@ -99,7 +99,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &140782559582041885
 Transform:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -170,7 +170,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  gameManager: {fileID: 0}
+  pushForce: 300
+  isTouchByPlayer: 0
+  deadDisableCollider: {fileID: 4748182353129187720}
+  player: {fileID: 0}
 --- !u!1 &4354584424693637154
 GameObject:
   m_ObjectHideFlags: 0
@@ -216,7 +219,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.37400186}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -227,7 +230,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.78689307, y: 0.9399759}
+  m_Size: {x: 0.9588926, y: 0.1919722}
   m_EdgeRadius: 0
 --- !u!114 &6630738012960786380
 MonoBehaviour:
@@ -242,7 +245,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   goomba: {fileID: 140782559582041889}
-  pushForce: 400
 --- !u!1 &4388187777132333211
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,7 +271,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4388187777132333211}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.182, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 140782559582041885}
@@ -288,7 +290,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.29374287}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -299,7 +301,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.043259, y: 0.3207351}
+  m_Size: {x: 1.04, y: 0.7165038}
   m_EdgeRadius: 0
 --- !u!114 &3061857085521458329
 MonoBehaviour:
@@ -313,5 +315,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b2b30d2d18d4318a7ad37683d91dfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 5562541293349834288, guid: 2a2addac90ed74fabb168b9cf9fa008c, type: 3}
   goomba: {fileID: 140782559582041889}

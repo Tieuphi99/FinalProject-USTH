@@ -7,9 +7,12 @@ using UnityEngine.Rendering;
 public class GoombaController : MonoBehaviour
 {
     public int speed = 2;
+    public float pushForce = 400;
+    public bool isTouchByPlayer;
 
-    public GameManager gameManager;
     private Animator _goombaAnim;
+    public Collider2D deadDisableCollider;
+    public GameObject player;
 
     private static readonly int DieB = Animator.StringToHash("Die_b");
 
@@ -31,8 +34,8 @@ public class GoombaController : MonoBehaviour
 
     public void Die()
     {
-        gameManager.goombas.Remove(this);
-        gameManager.goombaGameObjects.Remove(gameObject);
+        isTouchByPlayer = true;
+        deadDisableCollider.enabled = false;
         _goombaAnim.SetBool(DieB, true);
         StartCoroutine(Destroy());
     }
@@ -45,7 +48,8 @@ public class GoombaController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Ground") && !other.gameObject.CompareTag("Brick") && !other.gameObject.CompareTag("ScreenBorder"))
+        if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Ground") &&
+            !other.gameObject.CompareTag("Brick") && !other.gameObject.CompareTag("ScreenBorder"))
         {
             speed = -speed;
             Move();

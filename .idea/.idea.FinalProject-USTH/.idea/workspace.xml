@@ -20,7 +20,74 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ddcc6ec-3216-405f-82ae-564f55857219" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/BrickAnim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/BrickAnim/BrickAfterHit.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/BrickAnim/BrickAfterHit.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/BrickAnim/BrickAfterHitIdle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/BrickAnim/BrickAfterHitIdle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/BrickAnim/BrickAnim.controller" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/BrickAnim/BrickAnim.controller.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/BrickAnim/BrickIdle.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/BrickAnim/BrickIdle.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/CoinBrickAnim/CoinBrickAfterHit.anim" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Animations/CoinBrickAnim/CoinBrickAfterHit.anim.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/BrickController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoinBrickController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FinalProject-USTH/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FinalProject-USTH/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FinalProject-USTH/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FinalProject-USTH/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/CoinBrickAnim/CoinBrickAnim.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/CoinBrickAnim/CoinBrickAnim.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/EnemiesAnim/GoombaAmin/GoombaWalk.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/EnemiesAnim/GoombaAmin/GoombaWalk.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Goomba.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/Goomba.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/InteractableObjects/Bricks/BrownBrick.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/InteractableObjects/Bricks/BrownBrick.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/InteractableObjects/Bricks/CoinBrick.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/InteractableObjects/Bricks/CoinBrick.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/InteractableObjects/Stones/BlockStone.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/InteractableObjects/Stones/BlockStone.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/World_1_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/World_1_1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BlockPlayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BlockPlayer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyBody.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyBody.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyHead.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyHead.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowPlayer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/FollowPlayer.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GoombaController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GoombaController.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/605b6a-aa87f4e7d800e41b09.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/605b6a-aa87f4e7d800e41b09.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/605b6a-c8142232694ad4220a.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/605b6a-c8142232694ad4220a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/605b6a-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/605b6a-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/a35e8c-2a2addac90ed74fabb.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/a35e8c-2a2addac90ed74fabb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/a35e8c-5f184558bafb449e99.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/a35e8c-5f184558bafb449e99.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/a35e8c-aa87f4e7d800e41b09.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/a35e8c-aa87f4e7d800e41b09.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/a35e8c-c8142232694ad4220a.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/a35e8c-c8142232694ad4220a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/a35e8c-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/a35e8c-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/2a/2a2addac90ed74fabb168b9cf9fa008c" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/2a/2a2addac90ed74fabb168b9cf9fa008c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/34/34a95236d82b14b68a4e3f6a07745152" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/34/34a95236d82b14b68a4e3f6a07745152" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/34/34a95236d82b14b68a4e3f6a07745152.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/34/34a95236d82b14b68a4e3f6a07745152.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/40/40b2b30d2d18d4318a7ad37683d91dfb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/40/40b2b30d2d18d4318a7ad37683d91dfb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/48/48bdf1ba280864ccfb381a4b495fa7f7" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/48/48bdf1ba280864ccfb381a4b495fa7f7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/5f/5f184558bafb449e99502833c7812681" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/5f/5f184558bafb449e99502833c7812681" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/5f/5f184558bafb449e99502833c7812681.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/5f/5f184558bafb449e99502833c7812681.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/9d/9d70aef29bf8b4fc69dd91cb13bb48d9" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/9d/9d70aef29bf8b4fc69dd91cb13bb48d9" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/9e/9e787261f91414cd28e782cd4122f9e6" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/9e/9e787261f91414cd28e782cd4122f9e6" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/aa/aa87f4e7d800e41b0997fe2120683d68" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/aa/aa87f4e7d800e41b0997fe2120683d68" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/aa/aa87f4e7d800e41b0997fe2120683d68.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/aa/aa87f4e7d800e41b0997fe2120683d68.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/c8/c8142232694ad4220ae54ca4bbc27a64" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/c8/c8142232694ad4220ae54ca4bbc27a64" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/c8/c8142232694ad4220ae54ca4bbc27a64.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/c8/c8142232694ad4220ae54ca4bbc27a64.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/fa/fa1e6ac0e3c8e4213ac46a8f67e61700" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/fa/fa1e6ac0e3c8e4213ac46a8f67e61700" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/fe/fe1d401ca8db742deb88b7d68db86bde" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/fe/fe1d401ca8db742deb88b7d68db86bde" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/fe/fe1d401ca8db742deb88b7d68db86bde.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/fe/fe1d401ca8db742deb88b7d68db86bde.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,14 +98,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BlockPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GoombaController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SystemScripts/GameStatusController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/SystemScripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/AD9BEDA1-AB32-47EE-B473-0364A1BA4085/d0/6df1c8eb/Object.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/FollowPlayer.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyHead.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/EnemyBody.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CoinBrickController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/BrickController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -46,10 +111,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/BlockPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/FollowPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBody.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GoombaController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyHead.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameStatusController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CoinBrickBottomCollider.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBody.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GoombaController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SystemScripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SystemScripts/GameStatusController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CoinBrickController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/BrickController.cs" />
       </list>
     </option>
   </component>
@@ -104,7 +175,7 @@
       <workItem from="1590735784781" duration="8641000" />
       <workItem from="1591761322212" duration="13198000" />
       <workItem from="1591860047664" duration="2823000" />
-      <workItem from="1592967740064" duration="14796000" />
+      <workItem from="1592967740064" duration="28082000" />
     </task>
     <servers />
   </component>
