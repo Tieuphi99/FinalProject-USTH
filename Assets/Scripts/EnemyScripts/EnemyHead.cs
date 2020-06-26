@@ -1,25 +1,25 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class EnemyHead : MonoBehaviour
+namespace EnemyScripts
 {
-    private GoombaController _goombaController;
-    public GameObject goomba;
-
-    private void Awake()
+    public class EnemyHead : MonoBehaviour
     {
-        _goombaController = goomba.GetComponent<GoombaController>();
-    }
+        private GoombaController _goombaController;
+        public GameObject goomba;
 
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
+        private void Awake()
         {
-            other.rigidbody.AddForce(new Vector2(0f, _goombaController.pushForce));
-            _goombaController.speed = 0;
-            _goombaController.Die();
+            _goombaController = goomba.GetComponent<GoombaController>();
+        }
+
+        private void OnCollisionEnter2D(Collision2D other)
+        {
+            if (other.gameObject.CompareTag("Player"))
+            {
+                other.rigidbody.AddForce(new Vector2(0f, _goombaController.pushForce));
+                _goombaController.speed = 0;
+                _goombaController.Die();
+            }
         }
     }
 }

@@ -1,22 +1,23 @@
-﻿using System;
-using UnityEngine;
-using UnityEngine.UIElements;
+﻿using UnityEngine;
 
-public class BlockPlayer : MonoBehaviour
+namespace SystemScripts
 {
-    private void OnCollisionEnter2D(Collision2D other)
+    public class BlockPlayer : MonoBehaviour
     {
-        if (!other.gameObject.CompareTag("Player"))
+        private void OnCollisionEnter2D(Collision2D other)
         {
-            GetComponent<BoxCollider2D>().isTrigger = true;
+            if (!other.gameObject.CompareTag("Player"))
+            {
+                GetComponent<BoxCollider2D>().isTrigger = true;
+            }
         }
-    }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Player"))
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            GetComponent<BoxCollider2D>().isTrigger = false;
+            if (other.gameObject.CompareTag("Player"))
+            {
+                GetComponent<BoxCollider2D>().isTrigger = false;
+            }
         }
     }
 }

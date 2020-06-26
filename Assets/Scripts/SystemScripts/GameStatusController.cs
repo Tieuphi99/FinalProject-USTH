@@ -1,66 +1,69 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public class GameStatusController : MonoBehaviour
+namespace SystemScripts
 {
-    public TextMeshProUGUI playerNameText;
-    public TextMeshProUGUI playerScoreText;
-    public TextMeshProUGUI collectedCoinText;
-    public TextMeshProUGUI levelText;
-    public TextMeshProUGUI secondsText;
-
-    public void SetScore(string score)
+    public class GameStatusController : MonoBehaviour
     {
-        switch (score.Length)
+        public TextMeshProUGUI playerNameText;
+        public TextMeshProUGUI playerScoreText;
+        public TextMeshProUGUI collectedCoinText;
+        public TextMeshProUGUI levelText;
+        public TextMeshProUGUI secondsText;
+
+        public void SetScore(string score)
         {
-            case 1:
-                playerScoreText.SetText("000000");
-                break;
-            case 3:
-                playerScoreText.SetText($"000{score}");
-                break;
-            case 4:
-                playerScoreText.SetText($"00{score}");
-                break;
-            case 5:
-                playerScoreText.SetText($"0{score}");
-                break;
-            case 6:
-                playerScoreText.SetText(score);
-                break;
+            switch (score.Length)
+            {
+                case 1:
+                    playerScoreText.SetText("000000");
+                    break;
+                case 3:
+                    playerScoreText.SetText($"000{score}");
+                    break;
+                case 4:
+                    playerScoreText.SetText($"00{score}");
+                    break;
+                case 5:
+                    playerScoreText.SetText($"0{score}");
+                    break;
+                case 6:
+                    playerScoreText.SetText(score);
+                    break;
+            }
         }
-    }
 
-    public void SetCoin(int coin)
-    {
-        if (coin > 0)
+        public void SetCoin(int coin)
         {
-            collectedCoinText.SetText($"x0{coin}");
-            if (coin <= 9) return;
-            collectedCoinText.SetText($"x{coin}");
-            if (coin > 99)
+            if (coin > 0)
+            {
+                collectedCoinText.SetText($"x0{coin}");
+                if (coin <= 9) return;
+                collectedCoinText.SetText($"x{coin}");
+                if (coin > 99)
+                {
+                    collectedCoinText.SetText("x00");
+                }
+            }
+            else
             {
                 collectedCoinText.SetText("x00");
             }
         }
-        else
+
+        public void SetName(string playerName)
         {
-            collectedCoinText.SetText("x00");
+            playerNameText.SetText(playerName);
         }
-    }
 
-    public void SetName(string playerName)
-    {
-        playerNameText.SetText(playerName);
-    }
+        public void SetTime(float second)
+        {
+            secondsText.SetText(Mathf.RoundToInt(second).ToString());
+        }
 
-    public void SetTime(float second)
-    {
-        secondsText.SetText(Mathf.RoundToInt(second).ToString());
-    }
-
-    public void SetLevel(string level)
-    {
-        levelText.SetText(level);
+        public void SetLevel(string level)
+        {
+            levelText.SetText(level);
+        }
     }
 }

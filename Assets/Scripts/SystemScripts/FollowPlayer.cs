@@ -1,32 +1,32 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class FollowPlayer : MonoBehaviour
+namespace SystemScripts
 {
-    public GameObject player;
-    private float _furthestPlayerPosition;
-    private float _currentPlayerPosition;
-
-    private void Start()
+    public class FollowPlayer : MonoBehaviour
     {
-        _currentPlayerPosition = player.transform.position.x;
-    }
+        public GameObject player;
+        private float _furthestPlayerPosition;
+        private float _currentPlayerPosition;
 
-    // Camera follows player
-    void LateUpdate()
-    {
-        _currentPlayerPosition = player.transform.position.x;
-        if (_currentPlayerPosition >= _furthestPlayerPosition)
+        private void Start()
         {
-            _furthestPlayerPosition = _currentPlayerPosition;
+            _currentPlayerPosition = player.transform.position.x;
         }
 
-        if (_currentPlayerPosition > 4.5f &&
-            _currentPlayerPosition >= _furthestPlayerPosition)
+        // Camera follows player
+        void LateUpdate()
         {
-            transform.position = new Vector3(player.transform.position.x, 5, -10);
+            _currentPlayerPosition = player.transform.position.x;
+            if (_currentPlayerPosition >= _furthestPlayerPosition)
+            {
+                _furthestPlayerPosition = _currentPlayerPosition;
+            }
+
+            if (_currentPlayerPosition > 4.5f &&
+                _currentPlayerPosition >= _furthestPlayerPosition)
+            {
+                transform.position = new Vector3(player.transform.position.x, 5, -10);
+            }
         }
     }
 }

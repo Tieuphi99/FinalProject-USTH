@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using EnemyScripts;
 using UnityEngine;
 
 public class EnemyBody : MonoBehaviour
