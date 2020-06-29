@@ -13,6 +13,7 @@ namespace SystemScripts
         public List<GameObject> goombaGameObjects;
         public List<CoinBrickController> coinBrickControllers;
         public GameObject invisibleBrick;
+        public GameObject invisiblePowerUp;
 
         public int score;
         public string playerName = "MARIO";
@@ -127,6 +128,9 @@ namespace SystemScripts
         {
             if (!other.gameObject.CompareTag("Player")) return;
             invisibleBrick.SetActive(true);
+            invisibleBrick.GetComponent<BoxCollider2D>().isTrigger = false;
+            invisiblePowerUp.SetActive(true);
+            invisiblePowerUp.GetComponent<BoxCollider2D>().isTrigger = false;
             GetComponent<BoxCollider2D>().enabled = false;
         }
     }

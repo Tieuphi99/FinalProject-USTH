@@ -5,6 +5,7 @@ public class BrickController : MonoBehaviour
     public bool isTouchByPlayer;
     private Animator _brickAnim;
     private static readonly int TouchB = Animator.StringToHash("Touch_b");
+    private static readonly int TouchT = Animator.StringToHash("Touch_t");
 
     private void Awake()
     {
@@ -18,6 +19,11 @@ public class BrickController : MonoBehaviour
         {
             isTouchByPlayer = true;
             _brickAnim.SetBool(TouchB, isTouchByPlayer);
+        }
+
+        if (other.gameObject.CompareTag("BigPlayer"))
+        {
+            _brickAnim.SetTrigger(TouchT);
         }
     }
 

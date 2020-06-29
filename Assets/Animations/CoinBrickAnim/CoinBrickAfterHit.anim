@@ -81,6 +81,40 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
+        value: {x: 0, y: 0, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.13333334
+        value: {x: 0, y: 0.5, z: 1}
+        inSlope: {x: 0, y: 1.6666666, z: 0}
+        outSlope: {x: 0, y: 1.6666666, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      - serializedVersion: 3
+        time: 0.6
+        value: {x: 0, y: 1, z: 1}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    path: PowerUps
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
         value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -145,7 +179,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: PowerUps/Coin
+    path: Coin
   m_ScaleCurves: []
   m_FloatCurves: []
   m_PPtrCurves:
@@ -168,6 +202,50 @@ AnimationClip:
     script: {fileID: 0}
   - curve:
     - time: 0
+      value: {fileID: 2541018915902829252, guid: f03ebb725c6ba4cc8864aaf424ef8727,
+        type: 3}
+    - time: 0.59999996
+      value: {fileID: 2541018915902829252, guid: f03ebb725c6ba4cc8864aaf424ef8727,
+        type: 3}
+    attribute: m_Sprite
+    path: PowerUps/BigMushroom/Animations
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 7505012027392274011, guid: f03ebb725c6ba4cc8864aaf424ef8727,
+        type: 3}
+    - time: 0.6
+      value: {fileID: 7505012027392274011, guid: f03ebb725c6ba4cc8864aaf424ef8727,
+        type: 3}
+    attribute: m_Sprite
+    path: PowerUps/1UpMushroom/Animations
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: -9146915142612971274, guid: f03ebb725c6ba4cc8864aaf424ef8727,
+        type: 3}
+    - time: 0.6
+      value: {fileID: -9146915142612971274, guid: f03ebb725c6ba4cc8864aaf424ef8727,
+        type: 3}
+    attribute: m_Sprite
+    path: PowerUps/FireFlower/Animations
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
+      value: {fileID: 8939364383135057102, guid: f03ebb725c6ba4cc8864aaf424ef8727,
+        type: 3}
+    - time: 0.6
+      value: {fileID: 8939364383135057102, guid: f03ebb725c6ba4cc8864aaf424ef8727,
+        type: 3}
+    attribute: m_Sprite
+    path: PowerUps/UltimateStar/Animations
+    classID: 212
+    script: {fileID: 0}
+  - curve:
+    - time: 0
       value: {fileID: -6989488902003134825, guid: f03ebb725c6ba4cc8864aaf424ef8727,
         type: 3}
     - time: 0.15
@@ -183,7 +261,7 @@ AnimationClip:
       value: {fileID: -6989488902003134825, guid: f03ebb725c6ba4cc8864aaf424ef8727,
         type: 3}
     attribute: m_Sprite
-    path: PowerUps/Coin/Animations
+    path: Coin/Animations
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
@@ -201,7 +279,14 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2301422801
+      path: 1199376603
+      attribute: 1
+      script: {fileID: 0}
+      typeID: 4
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
+      path: 4116396131
       attribute: 1
       script: {fileID: 0}
       typeID: 4
@@ -215,7 +300,35 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     - serializedVersion: 2
-      path: 2372704233
+      path: 2382135655
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 3037192237
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 3670443757
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 731429816
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+    - serializedVersion: 2
+      path: 3008124251
       attribute: 0
       script: {fileID: 0}
       typeID: 212
@@ -226,6 +339,14 @@ AnimationClip:
     - {fileID: 4210305635217951160, guid: f03ebb725c6ba4cc8864aaf424ef8727, type: 3}
     - {fileID: 4210305635217951160, guid: f03ebb725c6ba4cc8864aaf424ef8727, type: 3}
     - {fileID: 4210305635217951160, guid: f03ebb725c6ba4cc8864aaf424ef8727, type: 3}
+    - {fileID: 2541018915902829252, guid: f03ebb725c6ba4cc8864aaf424ef8727, type: 3}
+    - {fileID: 2541018915902829252, guid: f03ebb725c6ba4cc8864aaf424ef8727, type: 3}
+    - {fileID: 7505012027392274011, guid: f03ebb725c6ba4cc8864aaf424ef8727, type: 3}
+    - {fileID: 7505012027392274011, guid: f03ebb725c6ba4cc8864aaf424ef8727, type: 3}
+    - {fileID: -9146915142612971274, guid: f03ebb725c6ba4cc8864aaf424ef8727, type: 3}
+    - {fileID: -9146915142612971274, guid: f03ebb725c6ba4cc8864aaf424ef8727, type: 3}
+    - {fileID: 8939364383135057102, guid: f03ebb725c6ba4cc8864aaf424ef8727, type: 3}
+    - {fileID: 8939364383135057102, guid: f03ebb725c6ba4cc8864aaf424ef8727, type: 3}
     - {fileID: -6989488902003134825, guid: f03ebb725c6ba4cc8864aaf424ef8727, type: 3}
     - {fileID: -9131867936041140510, guid: f03ebb725c6ba4cc8864aaf424ef8727, type: 3}
     - {fileID: 6261110269357047246, guid: f03ebb725c6ba4cc8864aaf424ef8727, type: 3}
@@ -236,7 +357,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.59999996
+    m_StopTime: 0.6166667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -456,6 +577,81 @@ AnimationClip:
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.x
+    path: PowerUps
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.13333334
+        value: 0.5
+        inSlope: 1.6666666
+        outSlope: 1.6666666
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      - serializedVersion: 3
+        time: 0.6
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.y
+    path: PowerUps
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_LocalPosition.z
+    path: PowerUps
+    classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 136
+        weightedMode: 0
+        inWeight: 0.33333334
+        outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.016666668
         value: 0
@@ -496,7 +692,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: PowerUps/Coin
+    path: Coin
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -533,7 +729,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: PowerUps/Coin
+    path: Coin
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -588,7 +784,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: PowerUps/Coin
+    path: Coin
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves: []

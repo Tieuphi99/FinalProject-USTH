@@ -39,8 +39,8 @@ public class EnemyBody : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         playerGameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 4000));
-        playerGameObject.GetComponent<BoxCollider2D>().enabled = false;
-        playerGameObject.GetComponent<EdgeCollider2D>().enabled = false;
         playerGameObject.GetComponent<Rigidbody2D>().gravityScale = 25;
+        playerGameObject.GetComponent<PlayerController>().playerCol.enabled = false;
+        playerGameObject.GetComponent<PlayerController>().playerEdgeCol.enabled = false;
     }
 }

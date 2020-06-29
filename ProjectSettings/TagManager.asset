@@ -12,6 +12,11 @@ TagManager:
   - Brick
   - Stone
   - ScreenBorder
+  - BigMushroom
+  - 1UpMushroom
+  - Mushroom
+  - PowerBrick
+  - BigPlayer
   layers:
   - Default
   - TransparentFX

@@ -91,6 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6870494879476154642}
   - component: {fileID: 4097749100287180029}
+  - component: {fileID: -4031936410014476022}
   m_Layer: 0
   m_Name: FireFlower
   m_TagString: Untagged
@@ -139,3 +140,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-4031936410014476022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5179066272053332564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06409c95a3c9640e981aeffba3bd4d97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedRight: 0
+  speedUp: 1
+  isMoving: 0
+  isTouchByPlayer: 0
+  isEatable: 0
