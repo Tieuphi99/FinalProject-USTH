@@ -20,35 +20,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ddcc6ec-3216-405f-82ae-564f55857219" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FinalProject-USTH/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FinalProject-USTH/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/BrickAnim/BrickBreak.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/BrickAnim/BrickBreak.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/InteractableObjects/Bricks/BrownBrick.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/InteractableObjects/Bricks/BrownBrick.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/PowerUps/FireFlower.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/PowerUps/FireFlower.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/PowerUps/UltimateStar.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/PowerUps/UltimateStar.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/World_1_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/World_1_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BrickController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BrickController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoinBrickController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoinBrickController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PowerUpsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PowerUpsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CrashedAssetImports.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyBody.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyBody.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyHead.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyHead.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/GoombaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/GoombaController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/SystemScripts/DeathFromBelow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/SystemScripts/DeathFromBelow.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/605b6a-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/605b6a-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/a35e8c-5f184558bafb449e99.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/a35e8c-5f184558bafb449e99.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/a35e8c-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/a35e8c-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/06/06409c95a3c9640e981aeffba3bd4d97" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/06/06409c95a3c9640e981aeffba3bd4d97" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/2d/2d5d69b5077ea439dad05d2554734b0f" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/2d/2d5d69b5077ea439dad05d2554734b0f" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/45/458fb539da07e4552b0c99ce407b7469" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/45/458fb539da07e4552b0c99ce407b7469" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/45/458fb539da07e4552b0c99ce407b7469.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/45/458fb539da07e4552b0c99ce407b7469.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/56/560b57a84f3434b26ae175c7080a34b3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/56/560b57a84f3434b26ae175c7080a34b3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/5f/5f184558bafb449e99502833c7812681" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/5f/5f184558bafb449e99502833c7812681" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/5f/5f184558bafb449e99502833c7812681.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/5f/5f184558bafb449e99502833c7812681.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/ca/ca18e52709dd3420da717a92457f6d69" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/ca/ca18e52709dd3420da717a92457f6d69" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/ca/ca18e52709dd3420da717a92457f6d69.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/ca/ca18e52709dd3420da717a92457f6d69.info" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/metadata/9d/9d70aef29bf8b4fc69dd91cb13bb48d9" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/9d/9d70aef29bf8b4fc69dd91cb13bb48d9" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,19 +65,19 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyBody.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GoombaController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/SystemScripts/DeathFromBelow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/GoombaController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SystemScripts/BlockPlayer.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyHead.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SystemScripts/FollowPlayer.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SystemScripts/GameStatusController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PowerUpsMovement.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SystemScripts/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyBody.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PowerUpsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CoinBrickController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/BrickController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/GoombaController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyHead.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyBody.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/SystemScripts/DeathFromBelow.cs" />
       </list>
     </option>
   </component>
@@ -151,7 +132,7 @@
       <workItem from="1590735784781" duration="8641000" />
       <workItem from="1591761322212" duration="13198000" />
       <workItem from="1591860047664" duration="2823000" />
-      <workItem from="1592967740064" duration="50161000" />
+      <workItem from="1592967740064" duration="51061000" />
     </task>
     <servers />
   </component>

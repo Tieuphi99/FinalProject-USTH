@@ -48,7 +48,8 @@ namespace EnemyScripts
         private void OnCollisionEnter2D(Collision2D other)
         {
             if (!other.gameObject.CompareTag("Player") && !other.gameObject.CompareTag("Ground") &&
-                !other.gameObject.CompareTag("Brick") && !other.gameObject.CompareTag("ScreenBorder"))
+                !other.gameObject.CompareTag("Brick") && !other.gameObject.CompareTag("ScreenBorder") &&
+                !other.gameObject.CompareTag("BigPlayer"))
             {
                 speed = -speed;
                 Move();

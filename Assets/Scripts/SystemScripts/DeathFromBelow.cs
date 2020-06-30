@@ -6,7 +6,7 @@ namespace SystemScripts
     {
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (!other.gameObject.CompareTag("Player"))
+            if (!other.gameObject.CompareTag("Player") || !other.gameObject.CompareTag("BigPlayer"))
             {
                 Destroy(other.gameObject);
             }
