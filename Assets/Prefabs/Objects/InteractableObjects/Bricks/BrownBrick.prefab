@@ -213,6 +213,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTouchByPlayer: 0
+  disableCollider: {fileID: 6301100306357802737}
+  breakBrickPieces: {fileID: 8630574656404730019}
+  animationSprite: {fileID: 7511259084974262130}
 --- !u!95 &4775736094581314302
 Animator:
   serializedVersion: 3
@@ -410,7 +413,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2103467798772425530
 Transform:
   m_ObjectHideFlags: 0
@@ -571,7 +574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1303427672899126444
 Transform:
   m_ObjectHideFlags: 0

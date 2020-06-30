@@ -28,7 +28,7 @@ public class PowerUpsController : MonoBehaviour
             {
                 transform.Translate(speedUp * Time.deltaTime * Vector2.up);
             }
-            else
+            else if (CompareTag("BigMushroom") || CompareTag("1UpMushroom"))
             {
                 isMoving = true;
                 GetComponent<Rigidbody2D>().isKinematic = false;
@@ -47,6 +47,11 @@ public class PowerUpsController : MonoBehaviour
             isTouchByPlayer = true;
             StartCoroutine(SetBoolEatable());
         }
+        else if (other.gameObject.CompareTag("BigPlayer"))
+        {
+            isTouchByPlayer = true;
+            StartCoroutine(SetBoolEatable());
+        }
 
         if (other.gameObject.CompareTag("Stone") || other.gameObject.CompareTag("Pipe"))
         {
@@ -57,16 +62,33 @@ public class PowerUpsController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        else if (other.gameObject.CompareTag("BigPlayer") && _isEatable)
+        {
+            Destroy(gameObject);
+        }
 
-        if (!other.gameObject.CompareTag("Enemy")) return;
+        if (!other.gameObject.CompareTag("Enemy") || CompareTag("FireFlower") || CompareTag("UltimateStar")) return;
         GetComponent<BoxCollider2D>().isTrigger = true;
         GetComponent<Rigidbody2D>().isKinematic = true;
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
+        if (!other.gameObject.CompareTag("Enemy") || CompareTag("FireFlower")) return;
         GetComponent<BoxCollider2D>().isTrigger = false;
         GetComponent<Rigidbody2D>().isKinematic = false;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Player") && _isEatable)
+        {
+            Destroy(gameObject);
+        }
+        else if (other.gameObject.CompareTag("BigPlayer") && _isEatable)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private IEnumerator SetBoolEatable()

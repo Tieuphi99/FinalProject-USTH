@@ -17,6 +17,8 @@ TagManager:
   - Mushroom
   - PowerBrick
   - BigPlayer
+  - FireFlower
+  - UltimateStar
   layers:
   - Default
   - TransparentFX

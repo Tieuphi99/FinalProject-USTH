@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: -7186665741036037580}
   m_Layer: 0
   m_Name: UltimateStar
-  m_TagString: Untagged
+  m_TagString: UltimateStar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -75,7 +75,6 @@ MonoBehaviour:
   speedUp: 1
   isMoving: 0
   isTouchByPlayer: 0
-  isEatable: 0
 --- !u!1 &5186526456650770315
 GameObject:
   m_ObjectHideFlags: 0

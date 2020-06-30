@@ -1,8 +1,12 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class BrickController : MonoBehaviour
 {
     public bool isTouchByPlayer;
+    public BoxCollider2D disableCollider;
+    public GameObject breakBrickPieces;
+    public GameObject animationSprite;
     private Animator _brickAnim;
     private static readonly int TouchB = Animator.StringToHash("Touch_b");
     private static readonly int TouchT = Animator.StringToHash("Touch_t");
@@ -21,9 +25,14 @@ public class BrickController : MonoBehaviour
             _brickAnim.SetBool(TouchB, isTouchByPlayer);
         }
 
-        if (other.gameObject.CompareTag("BigPlayer"))
+        else if (other.gameObject.CompareTag("BigPlayer"))
         {
+            disableCollider.enabled = false;
+            GetComponent<BoxCollider2D>().enabled = false;
+            breakBrickPieces.SetActive(true);
+            animationSprite.SetActive(false);
             _brickAnim.SetTrigger(TouchT);
+            StartCoroutine(Destroy());
         }
     }
 
@@ -34,5 +43,11 @@ public class BrickController : MonoBehaviour
             isTouchByPlayer = false;
             _brickAnim.SetBool(TouchB, isTouchByPlayer);
         }
+    }
+
+    IEnumerator Destroy()
+    {
+        yield return new WaitForSeconds(1);
+        Destroy(gameObject);
     }
 }

@@ -18,5 +18,10 @@ public class CoinBrickController : MonoBehaviour
             isTouchByPlayer = true;
             _coinBrickAnim.SetBool(TouchB, isTouchByPlayer);
         }
+        else if (other.gameObject.CompareTag("BigPlayer"))
+        {
+            isTouchByPlayer = true;
+            _coinBrickAnim.SetBool(TouchB, isTouchByPlayer);
+        }
     }
 }
