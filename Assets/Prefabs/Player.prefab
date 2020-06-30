@@ -312,6 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 410
+  slideDownSpeed: 5
   jumpForce: 795
   smoothTime: 0.6
   bigPlayer: {fileID: 7302171109682054432}

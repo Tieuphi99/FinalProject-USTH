@@ -19,6 +19,8 @@ TagManager:
   - BigPlayer
   - FireFlower
   - UltimateStar
+  - Pole
+  - Stand
   layers:
   - Default
   - TransparentFX
