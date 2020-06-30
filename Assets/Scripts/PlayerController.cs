@@ -132,7 +132,6 @@ public class PlayerController : MonoBehaviour
     IEnumerator SetBoolEatable()
     {
         yield return new WaitForSeconds(0.5f);
-        Debug.Log("TRUE");
         _isEatable = true;
     }
 }
