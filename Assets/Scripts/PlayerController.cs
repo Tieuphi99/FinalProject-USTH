@@ -60,9 +60,10 @@ public class PlayerController : MonoBehaviour
 
         if (_isFinish)
         {
-            _playerAnim.SetBool(HugB, true);
             if (transform.position.y > 0.953f)
             {
+                _playerAnim.SetBool(HugB, true);
+                _playerAnim.SetFloat(SpeedF, 0);
                 transform.Translate(slideDownSpeed * Time.deltaTime * Vector3.down);
             }
             else
@@ -79,7 +80,7 @@ public class PlayerController : MonoBehaviour
                 if (transform.position.x < 198.5f && _isNotHugPole)
                 {
                     transform.localScale = Vector3.one;
-                    _playerAnim.SetFloat(SpeedF, 9.1f);
+                    _playerAnim.SetFloat(SpeedF, 3f);
                     transform.Translate(slideDownSpeed * Time.deltaTime * Vector3.right);
                 }
             }
