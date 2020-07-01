@@ -26,7 +26,7 @@ AnimationClip:
       value: {fileID: -6626920692342517838, guid: 9a569984145514a2bb2802ef51df788b,
         type: 3}
     attribute: m_Sprite
-    path: SmallMarioAnimations
+    path: Animations/SmallMarioAnimations
     classID: 212
     script: {fileID: 0}
   m_SampleRate: 60
@@ -37,7 +37,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 3934993030
+      path: 407814648
       attribute: 0
       script: {fileID: 0}
       typeID: 212

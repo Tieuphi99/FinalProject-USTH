@@ -5661,6 +5661,11 @@ PrefabInstance:
       propertyPath: slideDownSpeed
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5562541293349834302, guid: 2a2addac90ed74fabb168b9cf9fa008c,
+        type: 3}
+      propertyPath: castle
+      value: 
+      objectReference: {fileID: 2006564267}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a2addac90ed74fabb168b9cf9fa008c, type: 3}
 --- !u!4 &598055174 stripped
@@ -17357,6 +17362,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4875449431937104817, guid: 78c70aba9532a4855a7866462b833e72,
     type: 3}
   m_PrefabInstance: {fileID: 2006290137}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2006564267 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 128134508665294599, guid: c03d41fde8a0e48bca68e174a1e5b2c0,
+    type: 3}
+  m_PrefabInstance: {fileID: 137011887}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2009774205
 PrefabInstance:

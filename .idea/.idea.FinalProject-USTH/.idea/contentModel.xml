@@ -14,6 +14,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="BrickController.cs" t="Include" />
+          <e p="CastleController.cs" t="Include" />
           <e p="CoinBrickController.cs" t="Include" />
           <e p="EnemyScripts" t="Include">
             <e p="EnemyBody.cs" t="Include" />

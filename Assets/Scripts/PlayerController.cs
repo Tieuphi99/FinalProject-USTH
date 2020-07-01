@@ -9,12 +9,16 @@ public class PlayerController : MonoBehaviour
     public float speed = 410f;
     public float slideDownSpeed = 410f;
     public float jumpForce = 795f;
+    public float flagPos;
+    public float finishPos;
     [Range(0, 1)] public float smoothTime = 0.6f;
 
+    public GameObject playerSprite;
     public GameObject bigPlayer;
     public GameObject bigPlayerCollider;
     public GameObject smallPlayer;
     public GameObject smallPlayerCollider;
+    public GameObject castle;
 
     public bool isDead;
     private bool _isOnGround = true;
@@ -60,7 +64,7 @@ public class PlayerController : MonoBehaviour
 
         if (_isFinish)
         {
-            if (transform.position.y > 0.953f)
+            if (transform.position.y > 1.5f)
             {
                 _playerAnim.SetBool(HugB, true);
                 _playerAnim.SetFloat(SpeedF, 0);
@@ -68,16 +72,16 @@ public class PlayerController : MonoBehaviour
             }
             else
             {
-                if (transform.position.x < 192.9768f)
+                if (transform.position.x < flagPos + 0.8f)
                 {
                     _playerAnim.SetBool(HugB, false);
                     transform.localScale = new Vector3(-1, 1, 1);
-                    transform.position = new Vector3(192.9768f, transform.position.y);
+                    transform.position = new Vector3(flagPos + 0.8f, transform.position.y);
                 }
 
                 _playerRb.isKinematic = false;
                 StartCoroutine(HugPole());
-                if (transform.position.x < 198.5f && _isNotHugPole)
+                if (transform.position.x < castle.transform.position.x && _isNotHugPole)
                 {
                     transform.localScale = Vector3.one;
                     _playerAnim.SetFloat(SpeedF, 3f);
@@ -139,7 +143,7 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other)
     {
         Debug.Log(other.gameObject.tag);
-
+        
         if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Pipe") ||
             other.gameObject.CompareTag("Brick") ||
             other.gameObject.CompareTag("Stone"))
@@ -157,9 +161,16 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Pole"))
         {
+            flagPos = other.gameObject.transform.position.x;
             _isFinish = true;
             _playerRb.velocity = Vector2.zero;
             _playerRb.isKinematic = true;
+        }
+
+        if (other.gameObject.CompareTag("FinishLine"))
+        {
+            finishPos = other.gameObject.transform.position.x;
+            playerSprite.SetActive(false);
         }
 
         if (!other.gameObject.CompareTag("BigMushroom") || !_isEatable) return;
