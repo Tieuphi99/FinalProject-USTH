@@ -20,29 +20,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3ddcc6ec-3216-405f-82ae-564f55857219" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CastleController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FinalProject-USTH/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FinalProject-USTH/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Objects/BackgroundObjects/Castle.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Objects/BackgroundObjects/Castle.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/CrashedAssetImports.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/BuiltinAssemblies.stamp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/605b6a-2a2addac90ed74fabb.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/605b6a-2a2addac90ed74fabb.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/605b6a-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/605b6a-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/a35e8c-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/a35e8c-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/assetDatabase3" beforeDir="false" afterPath="$PROJECT_DIR$/Library/assetDatabase3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/2a/2a2addac90ed74fabb168b9cf9fa008c" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/2a/2a2addac90ed74fabb168b9cf9fa008c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/85/859c9beb3be51428795eb2cb409d3f7b" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/85/859c9beb3be51428795eb2cb409d3f7b" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/metadata/c0/c03d41fde8a0e48bca68e174a1e5b2c0" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/c0/c03d41fde8a0e48bca68e174a1e5b2c0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/metadata/c0/c03d41fde8a0e48bca68e174a1e5b2c0.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/metadata/c0/c03d41fde8a0e48bca68e174a1e5b2c0.info" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,8 +82,8 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/EnemyScripts/EnemyBody.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/PowerUpsController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SystemScripts/DeathFromBelow.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/CastleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" />
       </list>
     </option>
   </component>
