@@ -6,13 +6,13 @@ namespace SystemScripts
     {
         private void OnCollisionEnter2D(Collision2D other)
         {
-            if (!other.gameObject.CompareTag("Player") || !other.gameObject.CompareTag("BigPlayer"))
+            if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("BigPlayer"))
             {
-                Destroy(other.gameObject);
+                other.gameObject.GetComponent<PlayerController>().isDead = true;
             }
             else
             {
-                other.gameObject.GetComponent<PlayerController>().isDead = true;
+                Destroy(other.gameObject);
             }
         }
     }

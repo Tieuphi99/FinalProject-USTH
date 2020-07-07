@@ -16,7 +16,9 @@ public class PlayerController : MonoBehaviour
     private bool _isEatable;
     private bool _isFinish;
     private bool _isNotHugPole;
-    private bool _isWalkingToCastle;
+    public bool isWalkingToCastle;
+    public bool isInCastle;
+    public bool isStopTime;
     private Vector3 _velocity;
 
     public GameObject playerSprite;
@@ -24,11 +26,10 @@ public class PlayerController : MonoBehaviour
     public GameObject bigPlayerCollider;
     public GameObject smallPlayer;
     public GameObject smallPlayerCollider;
+    public GameObject playerCol;
 
     private Animator _playerAnim;
     private Rigidbody2D _playerRb;
-    public BoxCollider2D playerCol;
-    public EdgeCollider2D playerEdgeCol;
 
     private static readonly int IdleB = Animator.StringToHash("Idle_b");
     private static readonly int WalkB = Animator.StringToHash("Walk_b");
@@ -47,6 +48,7 @@ public class PlayerController : MonoBehaviour
         isDead = false;
         _isFinish = false;
         _isOnGround = true;
+        isInCastle = false;
     }
 
     private void FixedUpdate()
@@ -80,7 +82,7 @@ public class PlayerController : MonoBehaviour
 
                 _playerRb.isKinematic = false;
                 StartCoroutine(HugPole());
-                if (_isWalkingToCastle && _isNotHugPole)
+                if (_isNotHugPole)
                 {
                     transform.localScale = Vector3.one;
                     _playerAnim.SetFloat(SpeedF, 3f);
@@ -130,8 +132,14 @@ public class PlayerController : MonoBehaviour
     void Die()
     {
         _playerAnim.SetBool(DieB, isDead);
-        playerCol.enabled = false;
-        _playerRb.velocity = Vector2.zero;
+        // _playerRb.velocity = Vector2.zero;
+        StartCoroutine(DieAnim());
+    }
+
+    IEnumerator DieAnim()
+    {
+        yield return new WaitForSeconds(1);
+        playerCol.SetActive(false);
     }
 
     void GetPlayerSpeed()
@@ -141,6 +149,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
+        // Debug.Log(other.gameObject.tag);
         if (other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Pipe") ||
             other.gameObject.CompareTag("Brick") ||
             other.gameObject.CompareTag("Stone"))
@@ -162,12 +171,14 @@ public class PlayerController : MonoBehaviour
             _isFinish = true;
             _playerRb.velocity = Vector2.zero;
             _playerRb.isKinematic = true;
-            _isWalkingToCastle = true;
+            isWalkingToCastle = true;
+            isStopTime = true;
         }
 
         if (other.gameObject.CompareTag("Castle"))
         {
-            _isWalkingToCastle = false;
+            isInCastle = true;
+            isWalkingToCastle = false;
             playerSprite.SetActive(false);
         }
 

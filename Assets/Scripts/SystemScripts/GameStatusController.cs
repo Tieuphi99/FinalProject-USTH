@@ -58,7 +58,25 @@ namespace SystemScripts
 
         public void SetTime(float second)
         {
-            secondsText.SetText(Mathf.RoundToInt(second).ToString());
+            if (second > 0)
+            {
+                if (second >= 100)
+                {
+                    secondsText.SetText(Mathf.RoundToInt(second).ToString());
+                }
+                else if (second >= 10)
+                {
+                    secondsText.SetText($"0{Mathf.RoundToInt(second).ToString()}");
+                }
+                else
+                {
+                    secondsText.SetText($"00{Mathf.RoundToInt(second).ToString()}");
+                }
+            }
+            else
+            {
+                secondsText.SetText("000");
+            }
         }
 
         public void SetLevel(string level)

@@ -29,8 +29,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 903607213494254244}
-  m_RootOrder: 1
+  m_Father: {fileID: 14817616037679195}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &7079377461122702781
 BoxCollider2D:
@@ -107,8 +107,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 903607213494254244}
-  m_RootOrder: 3
+  m_Father: {fileID: 14817616037679195}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!68 &7893666250894920285
 EdgeCollider2D:
@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 5562541293077248271}
   m_Layer: 0
   m_Name: SmallMarioAnimations
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -293,6 +293,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 903607213494254244}
+  - {fileID: 14817616037679195}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -311,17 +312,15 @@ MonoBehaviour:
   speed: 410
   slideDownSpeed: 5
   jumpForce: 795
-  flagPos: 0
-  finishPos: 0
   smoothTime: 0.6
+  isDead: 0
+  isInCastle: 0
   playerSprite: {fileID: 8267366575525175697}
   bigPlayer: {fileID: 7302171109682054432}
   bigPlayerCollider: {fileID: 3713772949689718507}
   smallPlayer: {fileID: 5562541293077248257}
   smallPlayerCollider: {fileID: 1029444639882601917}
-  isDead: 0
-  playerCol: {fileID: 7079377461122702781}
-  playerEdgeCol: {fileID: 558512701000548605}
+  playerCol: {fileID: 7039581929503533562}
 --- !u!95 &5562541293349834303
 Animator:
   serializedVersion: 3
@@ -362,6 +361,38 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!1 &7039581929503533562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 14817616037679195}
+  m_Layer: 0
+  m_Name: PlayerCollider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &14817616037679195
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7039581929503533562}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4510656188418952238}
+  - {fileID: 4940862682625847657}
+  m_Father: {fileID: 5562541293349834300}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7302171109682054432
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,7 +422,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 903607213494254244}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1339337044728742395
 SpriteRenderer:
@@ -471,9 +502,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5562541293077248256}
-  - {fileID: 4510656188418952238}
   - {fileID: 5054532408108372261}
-  - {fileID: 4940862682625847657}
   m_Father: {fileID: 5562541293349834300}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

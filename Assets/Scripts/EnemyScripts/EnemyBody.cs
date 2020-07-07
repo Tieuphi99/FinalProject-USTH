@@ -29,12 +29,12 @@ namespace EnemyScripts
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                StartCoroutine(Die(other.gameObject));
+                // StartCoroutine(Die(other.gameObject));
                 _playerController.isDead = true;
             }
             else if (other.gameObject.CompareTag("BigPlayer"))
             {
-                StartCoroutine(Die(other.gameObject));
+                // StartCoroutine(Die(other.gameObject));
                 _playerController.isDead = true;
             }
         }
@@ -44,8 +44,6 @@ namespace EnemyScripts
             yield return new WaitForSeconds(1);
             playerGameObject.GetComponent<Rigidbody2D>().AddForce(new Vector2(0, 4000));
             playerGameObject.GetComponent<Rigidbody2D>().gravityScale = 25;
-            playerGameObject.GetComponent<PlayerController>().playerCol.enabled = false;
-            playerGameObject.GetComponent<PlayerController>().playerEdgeCol.enabled = false;
         }
     }
 }

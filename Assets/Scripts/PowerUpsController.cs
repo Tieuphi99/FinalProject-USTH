@@ -35,9 +35,11 @@ public class PowerUpsController : MonoBehaviour
             }
         }
 
-        if (!isMoving || !CompareTag("BigMushroom")) return;
-        isTouchByPlayer = false;
-        transform.Translate(speedRight * Time.deltaTime * Vector2.right);
+        if (isMoving && (CompareTag("BigMushroom") || CompareTag("1UpMushroom")))
+        {
+            isTouchByPlayer = false;
+            transform.Translate(speedRight * Time.deltaTime * Vector2.right);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D other)
