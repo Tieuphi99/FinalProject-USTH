@@ -313,6 +313,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isTouchByPlayer: 0
+  isNotSpecialBrick: 1
 --- !u!1 &9115763966427098048
 GameObject:
   m_ObjectHideFlags: 0

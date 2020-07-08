@@ -10,22 +10,28 @@ namespace SystemScripts
 
         private void Start()
         {
-            _currentPlayerPosition = player.transform.position.x;
+            if (player != null)
+            {
+                _currentPlayerPosition = player.transform.position.x;
+            }
         }
 
         // Camera follows player
         void LateUpdate()
         {
-            _currentPlayerPosition = player.transform.position.x;
-            if (_currentPlayerPosition >= _furthestPlayerPosition)
+            if (player != null)
             {
-                _furthestPlayerPosition = _currentPlayerPosition;
-            }
+                _currentPlayerPosition = player.transform.position.x;
+                if (_currentPlayerPosition >= _furthestPlayerPosition)
+                {
+                    _furthestPlayerPosition = _currentPlayerPosition;
+                }
 
-            if (_currentPlayerPosition > 4.5f &&
-                _currentPlayerPosition >= _furthestPlayerPosition)
-            {
-                transform.position = new Vector3(player.transform.position.x, 5, -10);
+                if (_currentPlayerPosition > 4.5f &&
+                    _currentPlayerPosition >= _furthestPlayerPosition)
+                {
+                    transform.position = new Vector3(player.transform.position.x, 5, -10);
+                }
             }
         }
     }

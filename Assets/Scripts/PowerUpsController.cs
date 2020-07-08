@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using SystemScripts;
 using UnityEditor;
 using UnityEngine;
 
@@ -94,10 +95,20 @@ public class PowerUpsController : MonoBehaviour
 
         if (other.CompareTag("Player") && _isEatable)
         {
+            GameStatusController.Score += 1000;
+            if (CompareTag("1UpMushroom"))
+            {
+                GameStatusController.Live += 1;
+            }
             Destroy(gameObject);
         }
         else if (other.CompareTag("BigPlayer") && _isEatable)
         {
+            GameStatusController.Score += 1000;
+            if (CompareTag("1UpMushroom"))
+            {
+                GameStatusController.Live += 1;
+            }
             Destroy(gameObject);
         }
     }

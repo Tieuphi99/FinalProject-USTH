@@ -11,15 +11,10 @@ namespace SystemScripts
         public GameStatusController gameStatusController;
         public List<GoombaController> goombaControllers;
         public List<GameObject> goombaGameObjects;
-        public List<CoinBrickController> coinBrickControllers;
         public GameObject invisibleBrick;
         public GameObject invisiblePowerUp;
 
-        public int score;
-        public string playerName = "MARIO";
-        public string level = "1-1";
         public float time = 400;
-        public int collectedCoin;
         public float finalTime;
 
         // public GameObject playerPrefab;
@@ -37,24 +32,29 @@ namespace SystemScripts
             //
             // _goomba.GetComponent<GoombaController>().player = player;
             // mainCamera.GetComponent<FollowPlayer>().player = player;
+            // DontDestroyOnLoad(gameStatusController.playerScoreText.gameObject);
+            // DontDestroyOnLoad(gameStatusController.collectedCoinText.gameObject);
 
-            gameStatusController.SetLevel(level);
-            gameStatusController.SetTime(time);
-            gameStatusController.SetName(playerName);
+            // gameStatusController.SetLevel(level);
+            if (gameStatusController != null)
+            {
+                gameStatusController.SetTime(time);
+            }
         }
 
         private void Update()
         {
-            StopGoombaMovingWhenPlayerDie();
-            SetActiveGoombaWhenSeePlayer();
-            UpdateScoreCoinBrick();
-            UpdateWhenKillGoomba();
-            UpdateUi();
-            Debug.Log(player.isStopTime);
-            if (player.isStopTime)
+            if (player != null)
             {
-                finalTime = time;
-                player.isStopTime = false;
+                StopGoombaMovingWhenPlayerDie();
+                SetActiveGoombaWhenSeePlayer();
+                // UpdateWhenKillGoomba();
+                UpdateTime();
+                if (player.isStopTime)
+                {
+                    finalTime = time;
+                    player.isStopTime = false;
+                }
             }
         }
 
@@ -94,32 +94,37 @@ namespace SystemScripts
             }
         }
 
-        private void UpdateWhenKillGoomba()
-        {
-            for (var i = 0; i < goombaControllers.Count; i++)
-            {
-                if (!goombaControllers[i].isTouchByPlayer) continue;
-                score += 100;
-                goombaControllers.Remove(goombaControllers[i]);
-                goombaGameObjects.Remove(goombaGameObjects[i]);
-            }
-        }
+        // private void UpdateWhenKillGoomba()
+        // {
+        //     for (var i = 0; i < goombaControllers.Count; i++)
+        //     {
+        //         if (!goombaControllers[i].isTouchByPlayer) continue;
+        //         GameStatusController.Score += 100;
+        //         goombaControllers.Remove(goombaControllers[i]);
+        //         goombaGameObjects.Remove(goombaGameObjects[i]);
+        //     }
+        // }
 
-        private void UpdateScoreCoinBrick()
-        {
-            for (var i = 0; i < coinBrickControllers.Count; i++)
-            {
-                if (!coinBrickControllers[i].isTouchByPlayer) continue;
-                score += 200;
-                collectedCoin += 1;
-                coinBrickControllers.Remove(coinBrickControllers[i]);
-            }
-        }
+        // private void UpdateScoreCoinBrick()
+        // {
+        //     for (var i = 0; i < coinBrickControllers.Count; i++)
+        //     {
+        //         if (!coinBrickControllers[i].isTouchByPlayer) continue;
+        //         GameStatusController.Score += 200;
+        //         GameStatusController.CollectedCoin += 1;
+        //         coinBrickControllers.Remove(coinBrickControllers[i]);
+        //     }
+        //
+        //     if (GameStatusController.CollectedCoin > 99)
+        //     {
+        //         GameStatusController.CollectedCoin = 0;
+        //     }
+        // }
 
-        private void UpdateUi()
+        private void UpdateTime()
         {
-            gameStatusController.SetCoin(collectedCoin);
-            gameStatusController.SetScore(score.ToString());
+            //     gameStatusController.SetCoin(collectedCoin);
+            //     gameStatusController.SetScore(Score.ToString());
             if (!player.isDead && !player.isWalkingToCastle && !player.isInCastle)
             {
                 gameStatusController.SetTime(time -= Time.deltaTime * 2);
@@ -150,5 +155,10 @@ namespace SystemScripts
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
+
+        // public static void NextLevelScene()
+        // {
+        //     SceneManager.LoadScene(GameStatusController.CurrentLevel);
+        // }
     }
 }

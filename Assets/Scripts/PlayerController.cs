@@ -2,7 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlTypes;
+using SystemScripts;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -136,7 +138,7 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(DieAnim());
     }
 
-    IEnumerator DieAnim()
+    private IEnumerator DieAnim()
     {
         yield return new WaitForSeconds(1);
         playerCol.SetActive(false);
@@ -177,6 +179,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Castle"))
         {
+            StartCoroutine(NextLevel());
             isInCastle = true;
             isWalkingToCastle = false;
             playerSprite.SetActive(false);
@@ -191,15 +194,21 @@ public class PlayerController : MonoBehaviour
         smallPlayerCollider.SetActive(false);
     }
 
-    IEnumerator SetBoolEatable()
+    private IEnumerator SetBoolEatable()
     {
         yield return new WaitForSeconds(0.5f);
         _isEatable = true;
     }
 
-    IEnumerator HugPole()
+    private IEnumerator HugPole()
     {
         yield return new WaitForSeconds(1.2f);
         _isNotHugPole = true;
+    }
+
+    private IEnumerator NextLevel()
+    {
+        yield return new WaitForSeconds(5);
+        SceneManager.LoadScene(1);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using SystemScripts;
 using UnityEngine;
 
 namespace EnemyScripts
@@ -30,6 +31,7 @@ namespace EnemyScripts
             if (other.gameObject.CompareTag("Player"))
             {
                 // StartCoroutine(Die(other.gameObject));
+                GameStatusController.Live -= 1;
                 _playerController.isDead = true;
             }
             else if (other.gameObject.CompareTag("BigPlayer"))
